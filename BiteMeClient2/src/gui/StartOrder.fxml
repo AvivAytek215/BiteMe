@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.GaussianBlur?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1">
+   <top>
+      <AnchorPane prefHeight="120.0" prefWidth="800.0" style="-fx-background-color: #F3B93C;" BorderPane.alignment="CENTER">
+         <children>
+            <ImageView fitHeight="100.0" fitWidth="200.0" layoutX="20.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@BiteMe_Logo.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="758.0" layoutY="14.0" text="בס&quot;ד">
+               <font>
+                  <Font name="David" size="14.0" />
+               </font>
+            </Label>
+            <Line endX="1048.919189453125" layoutX="-252.0" layoutY="122.0" startX="252.0" strokeWidth="2.0">
+               <stroke>
+                  <LinearGradient endX="1.0" endY="0.0">
+                     <stops>
+                        <Stop color="#d09d26" />
+                        <Stop color="WHITE" offset="1.0" />
+                     </stops>
+                  </LinearGradient>
+               </stroke>
+               <effect>
+                  <GaussianBlur />
+               </effect>
+            </Line>
+            <Label layoutX="277.0" layoutY="31.0" text="Start Order">
+               <font>
+                  <Font size="50.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+   </top>
+   <center>
+      <AnchorPane prefHeight="430.0" prefWidth="800.0" style="-fx-background-color: linear-gradient(to bottom right, #F0F0F0, #F0F0F0, #FFFFFF);" BorderPane.alignment="CENTER">
+         <children>
+            <Button fx:id="deliveryBtn" layoutX="505.0" layoutY="154.0" mnemonicParsing="false" onAction="#delivery" prefHeight="91.0" prefWidth="155.0" text="Delivery">
+               <font>
+                  <Font size="15.0" />
+               </font></Button>
+            <Button fx:id="pickUpBtn" layoutX="110.0" layoutY="154.0" mnemonicParsing="false" onAction="#pickUp" prefHeight="91.0" prefWidth="156.0" text="Pick-Up">
+               <font>
+                  <Font size="15.0" />
+               </font></Button>
+            <Button fx:id="backBtn" layoutX="729.0" layoutY="432.0" mnemonicParsing="false" onAction="#back" prefHeight="31.0" prefWidth="57.0" text="Back" />
+            <Line endX="71.66668701171875" endY="147.0" layoutX="311.0" layoutY="95.0" startX="71.66668701171875" startY="61.666656494140625" />
+            <Text layoutX="86.0" layoutY="76.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Hi, Please select your desired delivery method below :" textAlignment="CENTER" wrappingWidth="628.8033447265625">
+               <font>
+                  <Font size="23.0" />
+               </font>
+            </Text>
+            <Text layoutX="523.0" layoutY="275.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Delivery Cost : 25 ₪" wrappingWidth="118.803466796875">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Text>
+         </children></AnchorPane>
+   </center>
+</BorderPane>

@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.effect.GaussianBlur?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1">
+   <top>
+      <AnchorPane prefHeight="120.0" prefWidth="800.0" style="-fx-background-color: #F3B93C;" BorderPane.alignment="CENTER">
+         <children>
+            <ImageView fitHeight="100.0" fitWidth="200.0" layoutX="20.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@BiteMe_Logo.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="758.0" layoutY="14.0" text="בס&quot;ד">
+               <font>
+                  <Font name="David" size="14.0" />
+               </font>
+            </Label>
+            <Line endX="1048.919189453125" layoutX="-252.0" layoutY="122.0" startX="252.0" strokeWidth="2.0">
+               <stroke>
+                  <LinearGradient endX="1.0" endY="0.0">
+                     <stops>
+                        <Stop color="#d09d26" />
+                        <Stop color="WHITE" offset="1.0" />
+                     </stops>
+                  </LinearGradient>
+               </stroke>
+               <effect>
+                  <GaussianBlur />
+               </effect>
+            </Line>
+            <Text layoutX="265.0" layoutY="80.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Active Orders" wrappingWidth="306.13677978515625">
+               <font>
+                  <Font size="45.0" />
+               </font>
+            </Text>
+         </children>
+      </AnchorPane>
+   </top>
+   <left>
+      <AnchorPane prefHeight="430.0" prefWidth="800.0" style="-fx-background-color: linear-gradient(to bottom right, #F0F0F0, #F0F0F0, #FFFFFF);" BorderPane.alignment="CENTER">
+         <children>
+            <ListView fx:id="deliveredLstView" layoutX="48.0" layoutY="50.0" prefHeight="324.0" prefWidth="200.0" />
+            <ListView fx:id="readyLstView" layoutX="300.0" layoutY="50.0" prefHeight="323.0" prefWidth="200.0" />
+            <ListView fx:id="approveLstView" layoutX="557.0" layoutY="50.0" prefHeight="323.0" prefWidth="200.0" />
+            <Button fx:id="BackBtn" layoutX="730.0" layoutY="438.0" mnemonicParsing="false" onAction="#back" prefHeight="25.0" prefWidth="55.0" text="Back" />
+            <Button fx:id="ApproveBtn" layoutX="599.0" layoutY="384.0" mnemonicParsing="false" onAction="#HandleApproveBtn" prefHeight="25.0" prefWidth="131.0" text="Approve" />
+            <Button fx:id="ReadyBtn" layoutX="335.0" layoutY="384.0" mnemonicParsing="false" onAction="#HandleReadyBtn" prefHeight="25.0" prefWidth="131.0" text="Ready" />
+            <Button fx:id="DeliveredBtn" layoutX="83.0" layoutY="384.0" mnemonicParsing="false" onAction="#HandleDeliveredBtn" prefHeight="25.0" prefWidth="131.0" text="Delivered" />
+            <Text fx:id="error3" fill="#b71f1f" layoutX="83.0" layoutY="442.0" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" visible="false" wrappingWidth="133.47003173828125">
+               <font>
+                  <Font size="14.0" />
+               </font></Text>
+            <Text fx:id="error2" fill="#ba1a1a" layoutX="335.0" layoutY="441.0" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" visible="false" wrappingWidth="130.8033447265625">
+               <font>
+                  <Font size="14.0" />
+               </font></Text>
+            <Text fx:id="error1" fill="#be1616" layoutX="598.0" layoutY="441.0" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" visible="false" wrappingWidth="132.8033447265625">
+               <font>
+                  <Font size="14.0" />
+               </font></Text>
+         </children></AnchorPane>
+   </left>
+</BorderPane>

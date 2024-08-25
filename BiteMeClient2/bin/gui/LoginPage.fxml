@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.Bloom?>
+<?import javafx.scene.effect.GaussianBlur?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1">
+   <top>
+      <AnchorPane prefHeight="120.0" prefWidth="800.0" style="-fx-background-color: #F3B93C;" BorderPane.alignment="CENTER">
+         <children>
+            <ImageView fitHeight="100.0" fitWidth="200.0" layoutX="20.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@BiteMe_Logo.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="758.0" layoutY="14.0" text="בס&quot;ד">
+               <font>
+                  <Font name="David" size="14.0" />
+               </font>
+            </Label>
+            <Line endX="1048.919189453125" layoutX="-252.0" layoutY="122.0" startX="252.0" strokeWidth="2.0">
+               <stroke>
+                  <LinearGradient endX="1.0" endY="0.0">
+                     <stops>
+                        <Stop color="#d09d26" />
+                        <Stop color="WHITE" offset="1.0" />
+                     </stops>
+                  </LinearGradient>
+               </stroke>
+               <effect>
+                  <GaussianBlur />
+               </effect>
+            </Line>
+            <Label layoutX="327.0" layoutY="25.0" prefHeight="42.0" prefWidth="142.0" text="Login ">
+               <font>
+                  <Font size="50.0" />
+               </font>
+               <effect>
+                  <Bloom />
+               </effect>
+            </Label>
+         </children>
+      </AnchorPane>
+   </top>
+   <center>
+      <AnchorPane prefHeight="430.0" prefWidth="800.0" style="-fx-background-color: linear-gradient(to bottom right, #F0F0F0, #F0F0F0, #FFFFFF);" BorderPane.alignment="CENTER">
+         <children>
+            <Label layoutX="122.0" layoutY="118.0" prefHeight="26.0" prefWidth="89.0" text="User Name:">
+               <font>
+                  <Font size="17.0" />
+               </font>
+            </Label>
+            <Label layoutX="122.0" layoutY="190.0" prefHeight="31.0" prefWidth="101.0" text="Password:">
+               <font>
+                  <Font size="17.0" />
+               </font>
+            </Label>
+            <TextField fx:id="userName" layoutX="279.0" layoutY="119.0" prefHeight="25.0" prefWidth="222.0" />
+            <Button fx:id="btnLogin" layoutX="330.0" layoutY="276.0" mnemonicParsing="false" onAction="#sumbitCredentialsToServer" prefHeight="25.0" prefWidth="119.0" text="Login" />
+            <Button fx:id="btnExit" layoutX="660.0" layoutY="438.0" mnemonicParsing="false" onAction="#exitApp" prefHeight="25.0" prefWidth="115.0" text="Exit" />
+            <Text fx:id="error" fill="#c91c1c" layoutX="133.0" layoutY="345.0" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" visible="false" wrappingWidth="525.4700317382812">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Text>
+            <PasswordField fx:id="password" layoutX="280.0" layoutY="193.0" prefHeight="25.0" prefWidth="219.0" />
+         </children></AnchorPane>
+   </center>
+</BorderPane>

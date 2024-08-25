@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.GaussianBlur?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1">
+   <top>
+      <AnchorPane prefHeight="120.0" prefWidth="800.0" style="-fx-background-color: #F3B93C;" BorderPane.alignment="CENTER">
+         <children>
+            <ImageView fitHeight="100.0" fitWidth="200.0" layoutX="20.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@BiteMe_Logo.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="758.0" layoutY="14.0" text="בס&quot;ד">
+               <font>
+                  <Font name="David" size="14.0" />
+               </font>
+            </Label>
+            <Line endX="1048.919189453125" layoutX="-252.0" layoutY="122.0" startX="252.0" strokeWidth="2.0">
+               <stroke>
+                  <LinearGradient endX="1.0" endY="0.0">
+                     <stops>
+                        <Stop color="#d09d26" />
+                        <Stop color="WHITE" offset="1.0" />
+                     </stops>
+                  </LinearGradient>
+               </stroke>
+               <effect>
+                  <GaussianBlur />
+               </effect>
+            </Line>
+            <Text layoutX="115.0" layoutY="84.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Manager Homepage" textAlignment="CENTER" wrappingWidth="570.714111328125">
+               <font>
+                  <Font size="43.0" />
+               </font>
+            </Text>
+            <ImageView fx:id="image" fitHeight="43.0" fitWidth="44.0" layoutX="734.0" layoutY="66.0" onMouseClicked="#personalDataView" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@userLogo.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+   </top>
+   <center>
+      <AnchorPane prefHeight="430.0" prefWidth="800.0" style="-fx-background-color: linear-gradient(to bottom right, #F0F0F0, #F0F0F0, #FFFFFF);" BorderPane.alignment="CENTER">
+         <children>
+            <Button fx:id="logoutButton" layoutX="687.0" layoutY="420.0" mnemonicParsing="false" onAction="#logOut" prefHeight="30.0" prefWidth="84.0" text="Logout" />
+            <Text layoutX="151.0" layoutY="46.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Hello Branch manager, what would you like to do today?">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Text>
+            <Button fx:id="viewMonthlyBtn" disable="true" layoutX="64.0" layoutY="285.0" mnemonicParsing="false" onAction="#handleViewMonthlyReportButtonAction" prefHeight="48.0" prefWidth="164.0" text="View Monthly Report" />
+            <Line endX="6.33331298828125" endY="137.79998779296875" layoutX="258.0" layoutY="191.0" startX="6.33331298828125" startY="-104.59999084472656" />
+            <Button fx:id="RegisterCustomerButton" layoutX="318.0" layoutY="196.0" mnemonicParsing="false" onAction="#handleRegistration" prefHeight="74.0" prefWidth="164.0" text="Register Customer" />
+            <Line endX="6.33331298828125" endY="136.20001220703125" layoutX="531.0" layoutY="191.0" startX="6.33331298828125" startY="-108.59999084472656" />
+            <ComboBox fx:id="rTypeBtn" disable="true" layoutX="71.0" layoutY="250.0" onAction="#selectRerportType" prefWidth="150.0" promptText="Select Type" />
+            <ComboBox fx:id="monthFxml" layoutX="71.0" layoutY="214.0" onAction="#selectedDate" prefWidth="150.0" promptText="Select Month" />
+            <TextField fx:id="YearSelectionFxml" layoutX="71.0" layoutY="147.0" promptText="Enter Year" text="2024" />
+            <Text fx:id="errorFxml" fill="#22aa22" layoutX="222.0" layoutY="406.0" strokeType="OUTSIDE" strokeWidth="0.0" text="-" textAlignment="CENTER" wrappingWidth="356.54725646972656">
+               <font>
+                  <Font size="20.0" />
+               </font></Text>
+            <TextField fx:id="FixedBranch" disable="true" editable="false" layoutX="71.0" layoutY="180.0" />
+            <Text layoutX="333.0" layoutY="97.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Approve a customer" underline="true">
+               <font>
+                  <Font size="15.0" />
+               </font></Text>
+            <Text layoutX="90.0" layoutY="96.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Retrieve a report" underline="true">
+               <font>
+                  <Font size="15.0" />
+               </font></Text>
+            <ComboBox fx:id="usersApproveFxml" layoutX="324.0" layoutY="147.0" prefWidth="150.0" />
+         </children></AnchorPane>
+   </center>
+</BorderPane>

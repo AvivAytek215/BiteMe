@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ProgressBar?>
+<?import javafx.scene.effect.GaussianBlur?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1">
+   <top>
+      <AnchorPane prefHeight="120.0" prefWidth="800.0" style="-fx-background-color: #F3B93C;" BorderPane.alignment="CENTER">
+         <children>
+            <ImageView fitHeight="100.0" fitWidth="200.0" layoutX="20.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@BiteMe_Logo.png" />
+               </image>
+            </ImageView>
+            <Line endX="1048.919189453125" layoutX="-252.0" layoutY="122.0" startX="252.0" strokeWidth="2.0">
+               <stroke>
+                  <LinearGradient endX="1.0" endY="0.0">
+                     <stops>
+                        <Stop color="#d09d26" />
+                        <Stop color="WHITE" offset="1.0" />
+                     </stops>
+                  </LinearGradient>
+               </stroke>
+               <effect>
+                  <GaussianBlur />
+               </effect>
+            </Line>
+            <Text layoutX="178.0" layoutY="77.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Business Customer Home" wrappingWidth="482.8033447265625">
+               <font>
+                  <Font size="40.0" />
+               </font>
+            </Text>
+            <ImageView fx:id="personalData" fitHeight="37.0" fitWidth="43.0" layoutX="740.0" layoutY="69.0" onMouseClicked="#PersonalData" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@userLogo.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+   </top>
+   <left>
+      <AnchorPane prefHeight="430.0" prefWidth="800.0" style="-fx-background-color: linear-gradient(to bottom right, #F0F0F0, #F0F0F0, #FFFFFF);" BorderPane.alignment="CENTER">
+         <children>
+            <Text layoutX="75.0" layoutY="65.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Hello, thank you for choosing BiteMe, please select the desired option bellow.">
+               <font>
+                  <Font size="19.0" />
+               </font>
+            </Text>
+            <Button fx:id="btnPreviusOrder" layoutX="319.0" layoutY="190.0" mnemonicParsing="false" onAction="#previousOrder" prefHeight="76.0" prefWidth="179.0" text="Previous Order" />
+            <Line endX="-12.66668701171875" endY="65.33331298828125" layoutX="287.0" layoutY="200.0" startX="-12.66668701171875" startY="-9.333343505859375" />
+            <Button fx:id="btnStartBusinessOrder" layoutX="46.0" layoutY="189.0" mnemonicParsing="false" onAction="#StartBusinessOrder" prefHeight="77.0" prefWidth="181.0" text="Start New Business Order" />
+            <Button fx:id="btnLogout" layoutX="711.0" layoutY="425.0" mnemonicParsing="false" onAction="#LogOut" prefHeight="25.0" prefWidth="61.0" text="Logout" />
+            <Line endX="-12.66668701171875" endY="65.33331298828125" layoutX="559.0" layoutY="200.0" startX="-12.66668701171875" startY="-9.333343505859375" />
+            <Button fx:id="btnContactUs" layoutX="593.0" layoutY="189.0" mnemonicParsing="false" onAction="#Contact" prefHeight="76.0" prefWidth="179.0" text="Contact Us" />
+            <Text fx:id="contact" fill="#d02929" layoutX="67.0" layoutY="315.0" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" visible="false" wrappingWidth="680.13671875">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Text>
+            <Button fx:id="refresh" layoutX="643.0" layoutY="425.0" mnemonicParsing="false" onAction="#refreshPage" text="refresh" />
+            <Button fx:id="recieveOrder" layoutX="525.0" layoutY="425.0" mnemonicParsing="false" onAction="#recieveBtn" text="Recieve Order" visible="false" />
+            <Text fx:id="orderStatus" layoutX="35.0" layoutY="332.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Order Status:" visible="false" />
+            <Text fx:id="approved" layoutX="56.0" layoutY="421.0" strokeType="OUTSIDE" strokeWidth="0.0" text="approved" visible="false" />
+            <Text fx:id="ready" layoutX="180.0" layoutY="421.0" strokeType="OUTSIDE" strokeWidth="0.0" text="ready" visible="false" />
+            <Text fx:id="delivered" layoutX="289.0" layoutY="421.0" strokeType="OUTSIDE" strokeWidth="0.0" text="delivered" visible="false" />
+            <ProgressBar fx:id="orderProg" layoutX="46.0" layoutY="358.0" prefHeight="18.0" prefWidth="270.0" progress="0.0" style="-fx-accent: #F3B93C;" visible="false" />
+         </children></AnchorPane>
+   </left>
+</BorderPane>
